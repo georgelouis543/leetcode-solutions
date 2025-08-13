@@ -1,5 +1,4 @@
 def count_elements(nums: list[int]):
-    count = 0
     hash_set = set(nums)
 
     for num in nums:
