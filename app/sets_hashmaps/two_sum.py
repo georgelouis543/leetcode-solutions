@@ -9,11 +9,11 @@ def two_sum(
     for idx, x in enumerate(nums):
         y = target - x
 
-        if x in hash_map:
-            return [hash_map[x], idx]
+        if y in hash_map:
+            return [hash_map[y], idx]
 
         else:
-            hash_map[y] = idx
+            hash_map[x] = idx
 
 
     return [-1, -1]
