@@ -6,6 +6,8 @@ print(len(nums))
 out_list = [0]*len(nums)
 print(out_list)
 
+
+# Very important to note that the list slicing is exclusive of the second interval limit
 out_list[0: k] = nums[n - k: n + 1]
 print(out_list)
 
