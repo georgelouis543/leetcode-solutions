@@ -1,16 +1,22 @@
-nums = [1,2,3,4,5,6,7]
-k = 4
-
-n = len(nums)
-print(len(nums))
-out_list = [0]*len(nums)
-print(out_list)
+from typing import List
 
 
-# Very important to note that the list slicing is exclusive of the second interval limit
-out_list[0: k] = nums[n - k: n + 1]
-print(out_list)
+class Solution:
+    def rotate(self, nums: List[int], k: int) -> None:
+        """
+        Do not return anything, modify nums in-place instead.
+        """
+        out_list = [0] * len(nums)
+        n = len(nums)
 
-out_list[k: n] = nums[0: n - k]
+        if k > len(nums):
+            k = k % len(nums)
 
-print(out_list)
+        out_list[0: k] = nums[n - k: n + 1]
+        out_list[k: n] = nums[0: n - k]
+        print(out_list)
+
+        for i in range(0, len(out_list)):
+            nums[i] = out_list[i]
+
+        return None
