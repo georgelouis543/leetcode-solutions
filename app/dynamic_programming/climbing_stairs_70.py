@@ -1,7 +1,7 @@
 class Solution:
     def climbStairs(self, n: int) -> int:
         # memoization
-        memo = {1: 1, 2: 2}
+        memo = {1: 1, 2: 2} # Bottom up memoization
         def f(x):
             if x in memo:
                 return memo[x]
